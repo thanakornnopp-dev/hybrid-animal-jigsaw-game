@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🦁 เกมเปิดป้ายทายสัตว์ผสม (Peechy Game Show)</title>
+  <meta name="description" content="เกมเปิดจิ๊กซอทายภาพหมวดสัตว์ผสม 10 ข้อ มีเสียงตอนเปิดและตอนจบ สไตล์ TikTok Peechy Game">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦁</text></svg>">
+</head>
+<body>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <div class="app-container" id="appContainer">
+
+    <!-- Top Header -->
+    <header class="header-bar">
+      <div class="logo-group">
+        <div class="logo-icon">🦁🐾</div>
+        <div>
+          <h1 class="logo-title">PEECHY GAME SHOW</h1>
+          <p class="logo-subtitle">เกมเปิดป้ายทายภาพ • หมวดสัตว์ผสม (10 ข้อ)</p>
+        </div>
+      </div>
+
+      <div class="stats-group">
+        <div class="badge-pill badge-round" id="roundBadge">ข้อที่ 1 / 10</div>
+        <div class="badge-pill badge-score">⭐ <span class="score-num" id="scoreBadge">0</span></div>
+      </div>
+
+      <div class="toolbar-group">
+        <button class="btn-icon" id="btnSound" title="เปิด/ปิดเสียงเอฟเฟกต์">🔊</button>
+        <button class="btn-icon" id="btnBgm" title="เปิด/ปิดเพลงประกอบเกม">🎵</button>
+        <button class="btn-icon" id="btnTikTokMode" title="สลับโหมด TikTok 9:16">📱</button>
+        <select id="gridSizeSelect" class="btn-icon" style="width: auto; padding: 0 8px; font-weight: 700;" title="ขนาดตารางจิ๊กซอ">
+          <option value="3">3 × 3 (9 ช่อง)</option>
+          <option value="4" selected>4 × 4 (16 ช่อง)</option>
+          <option value="5">5 × 5 (25 ช่อง)</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- Mode Selector Tabs -->
+    <div class="mode-tabs">
+      <button class="mode-tab active" data-mode="host">🎙️ โหมดพิธีกร TikTok (Host Mode)</button>
+      <button class="mode-tab" data-mode="quiz">🎯 โหมดเล่นคนเดียว (Solo Quiz)</button>
+    </div>
+
+    <!-- Main Game Arena -->
+    <main class="game-arena">
+
+      <!-- Left: The Picture & Jigsaw Frame -->
+      <section class="puzzle-section" style="display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%;">
+        <div class="puzzle-frame" id="puzzleFrame">
+          <!-- Underlying SVG Image -->
+          <div class="picture-viewport" id="pictureViewport"></div>
+          <!-- Overlay Clickable Jigsaw Tiles Grid -->
+          <div class="jigsaw-grid grid-4x4" id="jigsawGrid"></div>
+        </div>
+
+        <!-- Remaining Tiles Badge -->
+        <div class="badge-pill" id="tilesRemainingBadge" style="background: rgba(15, 23, 42, 0.7);">
+          แผ่นป้ายเหลือ: 16 / 16
+        </div>
+      </section>
+
+      <!-- Right: Interaction & Controls Panel -->
+      <section class="panel-container">
+        
+        <!-- Timer Bar (Visible in Solo Quiz mode) -->
+        <div class="timer-container" id="timerContainer" style="display: none;">
+          <div class="timer-pill" id="timerPill">⏱️ 30s</div>
+          <div class="timer-bar-track">
+            <div class="timer-bar-fill" id="timerBarFill"></div>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <!-- Hints Box -->
+          <div class="hints-container" id="hintsContainer"></div>
+
+          <!-- HOST MODE CONTROLS -->
+          <div id="hostControls" style="display: flex; flex-direction: column; gap: 10px;">
+            <div class="actions-row">
+              <button class="btn btn-primary" id="btnRandomTile">
+                <span>🎲 เปิดสุ่ม 1 ช่อง</span>
+              </button>
+              <button class="btn btn-cyan" id="btnUnlockHint1">
+                <span>💡 คำใบ้ 2</span>
+              </button>
+            </div>
+            <div class="actions-row">
+              <button class="btn btn-cyan" id="btnUnlockHint2">
+                <span>💡 คำใบ้ 3 (เฉลยตัวผสม)</span>
+              </button>
+              <button class="btn btn-secondary" id="btnResetRound">
+                <span>🔄 ปิดแผ่นป้ายใหม่</span>
+              </button>
+            </div>
+            <button class="btn btn-danger btn-full" id="btnRevealAll">
+              <span>🚨 เฉลยทันที! (พร้อมเสียงแตร & พลุ)</span>
+            </button>
+          </div>
+
+          <!-- SOLO QUIZ CONTROLS -->
+          <div id="quizControls" style="display: none;">
+            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 8px;">
+              🤔 ทายสิว่าคือ <b>สัตว์อะไรผสมกับอะไร?</b> (คลิกช้อยส์ หรือพิมพ์ตอบด้านล่าง):
+            </p>
+            <div class="choices-grid" id="choicesGrid"></div>
+
+            <div class="guess-input-group">
+              <input type="text" id="guessInput" class="input-text" placeholder="พิมพ์ชื่อสัตว์ผสม เช่น กริฟฟอน, แมวฮูก..." autocomplete="off">
+              <button class="btn btn-primary" id="btnSubmitGuess">ตอบ</button>
+            </div>
+          </div>
+
+          <!-- Solved Round Details Card -->
+          <div id="roundResultCard" class="round-result-card" style="display: none;"></div>
+
+          <!-- Next Button -->
+          <button class="btn btn-primary btn-full" id="btnNextRound" style="margin-top: 14px;">
+            <span>➡️ ไปยังข้อถัดไป</span>
+          </button>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- VICTORY MODAL (Grand Celebration when completing all 10 rounds) -->
+  <div class="modal-overlay" id="victoryModal">
+    <div class="modal-card">
+      <div class="victory-trophy">🏆🎉</div>
+      <h2 class="victory-title">จบเกมครบ 10 ข้อแล้ว!</h2>
+      <div class="victory-rank" id="victoryRank">🏆 ปรมาจารย์พันธุศาสตร์แฟนตาซีระดับ SSS</div>
+
+      <div class="victory-stats-grid">
+        <div class="stat-box">
+          <div class="stat-label">คะแนนรวม</div>
+          <div class="stat-value" id="victoryScore">0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">ผ่านทั้งหมด</div>
+          <div class="stat-value">10 / 10</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">เสียงฉลอง</div>
+          <div class="stat-value">🎺 ชนะ!</div>
+        </div>
+      </div>
+
+      <div style="width: 100%;">
+        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 8px;">
+          รวมคอลเลกชันสัตว์ผสมทั้ง 10 สายพันธุ์:
+        </p>
+        <div class="gallery-mini-grid" id="victoryGallery"></div>
+      </div>
+
+      <div style="display: flex; gap: 10px; width: 100%;">
+        <button class="btn btn-primary btn-full" id="btnRestartGame">
+          <span>🔄 เล่นใหม่อีกครั้ง</span>
+        </button>
+        <button class="btn btn-cyan btn-full" id="btnShareScore">
+          <span>📋 คัดลอกผลคะแนน</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="sound.js"></script>
+  <script src="animals-data.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

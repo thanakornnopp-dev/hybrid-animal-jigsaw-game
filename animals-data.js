@@ -1,0 +1,346 @@
+/**
+ * Hybrid Animals Dataset (10 Unique Creatures)
+ */
+const HYBRID_ANIMALS = [
+  {
+    "id": 1,
+    "name": "กริฟฟอน (Griffin)",
+    "animal1": {
+      "name": "สิงโต (Lion)",
+      "emoji": "🦁"
+    },
+    "animal2": {
+      "name": "นกอินทรี (Eagle)",
+      "emoji": "🦅"
+    },
+    "lore": "สัตว์ในตำนานสุดยิ่งใหญ่ หัวและปีกเป็นพญานกอินทรี ลำตัวและกรงเล็บทรงพลังดั่งเจ้าป่าสิงโต มีสายตาเฉียบคมและพละกำลังมหาศาล!",
+    "hints": [
+      "เป็นสัตว์ในตำนานยอดฮิต มีปีกกว้างบินบนท้องฟ้าได้",
+      "ผสมผสานระหว่าง 'ราชาแห่งสัตว์บก' และ 'ราชาแห่งนกนักล่า'",
+      "สิงโต 🦁 + นกอินทรี 🦅"
+    ],
+    "options": [
+      "กริฟฟอน (สิงโต + อินทรี)",
+      "เพกาซัส (ม้า + นก)",
+      "สฟิงซ์ (สิงโต + มนุษย์)",
+      "คิเมร่า (สิงโต + แพะ + งู)"
+    ],
+    "answerIndex": 0,
+    "acceptedKeywords": [
+      "กริฟฟอน",
+      "กริฟฟิน",
+      "griffin",
+      "gryphon",
+      "สิงโตอินทรี",
+      "สิงโตผสมอินทรี",
+      "อินทรีสิงโต"
+    ],
+    "svg": "<svg viewBox=\"0 0 800 800\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <linearGradient id=\"griffinSky\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#311042\"/>\n      <stop offset=\"40%\" stop-color=\"#7B1D58\"/>\n      <stop offset=\"70%\" stop-color=\"#E25822\"/>\n      <stop offset=\"100%\" stop-color=\"#F9AC34\"/>\n    </linearGradient>\n    <linearGradient id=\"griffinSun\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#FFF275\"/>\n      <stop offset=\"100%\" stop-color=\"#FF5722\"/>\n    </linearGradient>\n    <linearGradient id=\"griffinGold\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#FCD34D\"/>\n      <stop offset=\"50%\" stop-color=\"#F59E0B\"/>\n      <stop offset=\"100%\" stop-color=\"#B45309\"/>\n    </linearGradient>\n    <linearGradient id=\"griffinMane\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#FDE68A\"/>\n      <stop offset=\"100%\" stop-color=\"#92400E\"/>\n    </linearGradient>\n    <linearGradient id=\"griffinWing\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#FFFBEB\"/>\n      <stop offset=\"30%\" stop-color=\"#FCD34D\"/>\n      <stop offset=\"80%\" stop-color=\"#B45309\"/>\n      <stop offset=\"100%\" stop-color=\"#78350F\"/>\n    </linearGradient>\n    <linearGradient id=\"griffinRock\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#475569\"/>\n      <stop offset=\"100%\" stop-color=\"#1E293B\"/>\n    </linearGradient>\n  </defs>\n  <rect width=\"800\" height=\"800\" fill=\"url(#griffinSky)\"/>\n  <circle cx=\"400\" cy=\"460\" r=\"140\" fill=\"url(#griffinSun)\" opacity=\"0.9\"/>\n  <polygon points=\"-50,600 150,420 320,550 480,390 650,560 850,410 850,800 -50,800\" fill=\"#4A154B\" opacity=\"0.8\"/>\n  <polygon points=\"-20,800 200,620 480,630 620,680 820,650 820,800\" fill=\"url(#griffinRock)\"/>\n  <g transform=\"translate(360, 220) rotate(-15)\">\n    <path d=\"M 0 160 Q -80 60 -120 -80 Q -60 -40 -20 20 Q 20 -80 60 -120 Q 50 -30 60 50 Q 120 -60 160 -90 Q 130 30 110 100 Q 180 0 220 -30 Q 170 80 120 180 Z\" fill=\"url(#griffinWing)\" opacity=\"0.9\"/>\n  </g>\n  <path d=\"M 240 550 C 180 570 120 540 100 460 C 90 420 110 380 130 360 C 140 350 150 370 140 380 C 125 395 110 430 120 460 C 135 510 180 530 230 515 Z\" fill=\"url(#griffinGold)\"/>\n  <path d=\"M 130 360 C 110 340 120 310 140 315 C 160 320 170 340 160 370 C 150 385 135 375 130 360 Z\" fill=\"url(#griffinMane)\"/>\n  <ellipse cx=\"280\" cy=\"540\" rx=\"60\" ry=\"80\" fill=\"url(#griffinGold)\" transform=\"rotate(-10 280 540)\"/>\n  <path d=\"M 260 580 L 250 670 L 300 670 L 310 590 Z\" fill=\"url(#griffinGold)\"/>\n  <ellipse cx=\"275\" cy=\"670\" rx=\"35\" ry=\"18\" fill=\"#D97706\"/>\n  <path d=\"M 270 510 C 310 460 380 440 450 460 C 490 470 520 510 510 570 C 450 610 350 620 280 570 Z\" fill=\"url(#griffinGold)\"/>\n  <g transform=\"translate(430, 240) rotate(10)\">\n    <path d=\"M 0 180 Q -100 80 -160 -100 C -100 -50 -50 20 0 70 C 20 -70 80 -150 110 -170 C 90 -70 80 30 70 110 C 140 -60 210 -120 250 -130 C 200 0 170 80 140 160 C 220 30 280 -10 320 -20 C 270 90 200 180 120 240 C 50 220 10 200 0 180 Z\" fill=\"url(#griffinWing)\"/>\n  </g>\n  <path d=\"M 440 540 L 430 640 L 400 665 L 440 660 L 460 668 L 465 635 L 475 550 Z\" fill=\"#F59E0B\"/>\n  <path d=\"M 490 530 L 510 635 L 485 665 L 525 660 L 545 665 L 535 625 L 530 540 Z\" fill=\"#D97706\"/>\n  <path d=\"M 460 410 C 430 460 410 520 440 570 C 480 590 530 580 550 530 C 570 480 550 430 510 400 Z\" fill=\"url(#griffinMane)\"/>\n  <g transform=\"translate(520, 340)\">\n    <ellipse cx=\"0\" cy=\"0\" rx=\"65\" ry=\"55\" fill=\"url(#griffinGold)\"/>\n    <path d=\"M -50 10 Q -10 50 30 30 Q 70 10 50 -30 Q 0 -60 -50 -20 Z\" fill=\"#FEF3C7\"/>\n    <ellipse cx=\"15\" cy=\"-10\" rx=\"14\" ry=\"11\" fill=\"#78350F\"/>\n    <ellipse cx=\"16\" cy=\"-10\" rx=\"10\" ry=\"9\" fill=\"#F59E0B\"/>\n    <ellipse cx=\"17\" cy=\"-10\" rx=\"6\" ry=\"6\" fill=\"#0F172A\"/>\n    <circle cx=\"14\" cy=\"-13\" r=\"3\" fill=\"#FFFFFF\"/>\n    <path d=\"M -5 -22 Q 20 -26 42 -15\" stroke=\"#78350F\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/>\n    <path d=\"M 35 -15 Q 75 -15 95 10 Q 110 35 105 55 Q 90 70 80 40 Q 65 15 35 15 Z\" fill=\"#F59E0B\"/>\n    <path d=\"M 40 10 L 85 20 Q 70 35 60 30 Z\" fill=\"#B45309\"/>\n  </g>\n  <g transform=\"translate(40, 50)\">\n    <rect width=\"250\" height=\"55\" rx=\"27.5\" fill=\"#0F172A\" opacity=\"0.85\" stroke=\"#F59E0B\" stroke-width=\"2\"/>\n    <text x=\"25\" y=\"36\" font-family=\"'Kanit', sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#FCD34D\">🦁 + 🦅 กริฟฟอน</text>\n  </g>\n</svg>"
+  },
+  {
+    "id": 2,
+    "name": "แมวฮูก (Meowl)",
+    "animal1": {
+      "name": "แมว (Cat)",
+      "emoji": "🐱"
+    },
+    "animal2": {
+      "name": "นกฮูก (Owl)",
+      "emoji": "🦉"
+    },
+    "lore": "สัตว์เลี้ยงขนปุยแห่งราตรี หน้าตาเป็นน้องแมวตาโตอ้อนเก่ง แต่ตัวและปีกเป็นนกฮูก ชอบนอนกลางวันและเกาะกิ่งไม้มองหาของกินกลางดึก!",
+    "hints": [
+      "ตัวมีขนเป็นขนนก มีปีก แต่หน้ากลมมีหนวด ร้องเหมียวได้",
+      "ชอบล่าเหยื่อและตื่นตอนกลางคืนทั้งคู่ สายตาในความมืดดีเยี่ยม",
+      "แมว 🐱 + นกฮูก 🦉"
+    ],
+    "options": [
+      "แมวฮูก (แมว + นกฮูก)",
+      "กระต่ายเหยี่ยว (กระต่าย + เหยี่ยว)",
+      "ค้างคาวแมว (แมว + ค้างคาว)",
+      "นกแมว (นกพิราบ + แมว)"
+    ],
+    "answerIndex": 0,
+    "acceptedKeywords": [
+      "แมวฮูก",
+      "meowl",
+      "cat owl",
+      "owl cat",
+      "แมวนกฮูก",
+      "นกฮูกแมว"
+    ],
+    "svg": "<svg viewBox=\"0 0 800 800\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <linearGradient id=\"meowlSky\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#090A1A\"/>\n      <stop offset=\"50%\" stop-color=\"#1E1B4B\"/>\n      <stop offset=\"100%\" stop-color=\"#312E81\"/>\n    </linearGradient>\n    <linearGradient id=\"moonGlow\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#FEF08A\"/>\n      <stop offset=\"100%\" stop-color=\"#FACC15\"/>\n    </linearGradient>\n    <linearGradient id=\"owlFeathers\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#D97706\"/>\n      <stop offset=\"60%\" stop-color=\"#92400E\"/>\n      <stop offset=\"100%\" stop-color=\"#451A03\"/>\n    </linearGradient>\n    <linearGradient id=\"catFace\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#FBBF24\"/>\n      <stop offset=\"100%\" stop-color=\"#D97706\"/>\n    </linearGradient>\n  </defs>\n  <rect width=\"800\" height=\"800\" fill=\"url(#meowlSky)\"/>\n  <!-- Stars -->\n  <circle cx=\"120\" cy=\"150\" r=\"2.5\" fill=\"#FFFFFF\" opacity=\"0.8\"/>\n  <circle cx=\"280\" cy=\"80\" r=\"2\" fill=\"#FFFFFF\" opacity=\"0.9\"/>\n  <circle cx=\"650\" cy=\"120\" r=\"3\" fill=\"#FFFFFF\" opacity=\"0.7\"/>\n  <circle cx=\"720\" cy=\"220\" r=\"2\" fill=\"#FFFFFF\" opacity=\"0.8\"/>\n  <circle cx=\"180\" cy=\"300\" r=\"2\" fill=\"#FFFFFF\" opacity=\"0.6\"/>\n  <!-- Moon -->\n  <circle cx=\"600\" cy=\"220\" r=\"110\" fill=\"url(#moonGlow)\"/>\n  <circle cx=\"560\" cy=\"190\" r=\"95\" fill=\"url(#meowlSky)\"/>\n  <!-- Ancient Tree Branch -->\n  <path d=\"M -50 680 C 150 670 280 630 420 620 C 580 610 700 650 850 630 L 850 800 L -50 800 Z\" fill=\"#29180E\"/>\n  <path d=\"M 280 630 Q 340 600 370 540 Q 390 615 450 620 Z\" fill=\"#29180E\"/>\n  <!-- Moss on branch -->\n  <path d=\"M 220 640 Q 320 620 420 620 Q 520 615 620 630\" stroke=\"#15803D\" stroke-width=\"12\" fill=\"none\" stroke-linecap=\"round\"/>\n  <!-- Owl Body -->\n  <ellipse cx=\"400\" cy=\"490\" rx=\"140\" ry=\"170\" fill=\"url(#owlFeathers)\"/>\n  <!-- Feather Texture & Chest -->\n  <ellipse cx=\"400\" cy=\"510\" rx=\"90\" ry=\"120\" fill=\"#FEF3C7\"/>\n  <!-- Feather chevrons -->\n  <path d=\"M 360 450 Q 400 470 440 450\" stroke=\"#B45309\" stroke-width=\"4\" fill=\"none\"/>\n  <path d=\"M 350 490 Q 400 515 450 490\" stroke=\"#B45309\" stroke-width=\"4\" fill=\"none\"/>\n  <path d=\"M 360 530 Q 400 555 440 530\" stroke=\"#B45309\" stroke-width=\"4\" fill=\"none\"/>\n  <path d=\"M 370 570 Q 400 590 430 570\" stroke=\"#B45309\" stroke-width=\"4\" fill=\"none\"/>\n  <!-- Owl Wings Folded on Sides -->\n  <path d=\"M 270 420 C 230 480 250 580 300 640 C 310 580 300 480 270 420 Z\" fill=\"#78350F\"/>\n  <path d=\"M 530 420 C 570 480 550 580 500 640 C 490 580 500 480 530 420 Z\" fill=\"#78350F\"/>\n  <!-- Cat Head -->\n  <ellipse cx=\"400\" cy=\"300\" rx=\"130\" ry=\"110\" fill=\"url(#catFace)\"/>\n  <!-- Cat Ears -->\n  <polygon points=\"300,240 250,140 350,200\" fill=\"#D97706\"/>\n  <polygon points=\"295,230 265,160 335,200\" fill=\"#F472B6\"/>\n  <polygon points=\"500,240 550,140 450,200\" fill=\"#D97706\"/>\n  <polygon points=\"505,230 535,160 465,200\" fill=\"#F472B6\"/>\n  <!-- Giant Owl Eyes -->\n  <circle cx=\"340\" cy=\"290\" r=\"45\" fill=\"#0F172A\"/>\n  <circle cx=\"340\" cy=\"290\" r=\"40\" fill=\"#FACC15\"/>\n  <circle cx=\"340\" cy=\"290\" r=\"26\" fill=\"#0F172A\"/>\n  <circle cx=\"330\" cy=\"280\" r=\"9\" fill=\"#FFFFFF\"/>\n  <circle cx=\"460\" cy=\"290\" r=\"45\" fill=\"#0F172A\"/>\n  <circle cx=\"460\" cy=\"290\" r=\"40\" fill=\"#FACC15\"/>\n  <circle cx=\"460\" cy=\"290\" r=\"26\" fill=\"#0F172A\"/>\n  <circle cx=\"450\" cy=\"280\" r=\"9\" fill=\"#FFFFFF\"/>\n  <!-- Cat Nose & Mouth -->\n  <polygon points=\"392,340 408,340 400,352\" fill=\"#F472B6\"/>\n  <path d=\"M 390 355 Q 400 365 400 355 Q 400 365 410 355\" stroke=\"#78350F\" stroke-width=\"3\" fill=\"none\"/>\n  <!-- Whiskers -->\n  <line x1=\"330\" y1=\"350\" x2=\"240\" y2=\"340\" stroke=\"#FFFFFF\" stroke-width=\"3\" opacity=\"0.9\"/>\n  <line x1=\"330\" y1=\"360\" x2=\"230\" y2=\"365\" stroke=\"#FFFFFF\" stroke-width=\"3\" opacity=\"0.9\"/>\n  <line x1=\"470\" y1=\"350\" x2=\"560\" y2=\"340\" stroke=\"#FFFFFF\" stroke-width=\"3\" opacity=\"0.9\"/>\n  <line x1=\"470\" y1=\"360\" x2=\"570\" y2=\"365\" stroke=\"#FFFFFF\" stroke-width=\"3\" opacity=\"0.9\"/>\n  <!-- Paws & Talons on Branch -->\n  <ellipse cx=\"360\" cy=\"625\" rx=\"30\" ry=\"16\" fill=\"#FEF3C7\"/>\n  <path d=\"M 345 635 L 340 650 M 360 637 L 360 652 M 375 635 L 380 650\" stroke=\"#0F172A\" stroke-width=\"4\" stroke-linecap=\"round\"/>\n  <ellipse cx=\"440\" cy=\"625\" rx=\"30\" ry=\"16\" fill=\"#FEF3C7\"/>\n  <path d=\"M 425 635 L 420 650 M 440 637 L 440 652 M 455 635 L 460 650\" stroke=\"#0F172A\" stroke-width=\"4\" stroke-linecap=\"round\"/>\n  <!-- Badge -->\n  <g transform=\"translate(40, 50)\">\n    <rect width=\"240\" height=\"55\" rx=\"27.5\" fill=\"#0F172A\" opacity=\"0.85\" stroke=\"#FACC15\" stroke-width=\"2\"/>\n    <text x=\"25\" y=\"36\" font-family=\"'Kanit', sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#FDE047\">🐱 + 🦉 แมวฮูก</text>\n  </g>\n</svg>"
+  },
+  {
+    "id": 3,
+    "name": "ช้างผีเสื้อ (Ele-fly)",
+    "animal1": {
+      "name": "ช้าง (Elephant)",
+      "emoji": "🐘"
+    },
+    "animal2": {
+      "name": "ผีเสื้อ (Butterfly)",
+      "emoji": "🦋"
+    },
+    "lore": "ช้างน้อยจอมมหัศจรรย์ ตัวใหญ่ใจดีมีงวงพ่นละอองน้ำ แต่มีปีกผีเสื้อลายสีฟ้าเรืองแสงขนาดมหึมา บินร่อนไปมาระหว่างยอดไม้ในป่าเวทมนตร์!",
+    "hints": [
+      "ตัวใหญ่มีงวงยาวและหูใหญ่ แต่บินได้ด้วยปีกสีสันสดใส",
+      "สัตว์บกที่ใหญ่ที่สุด ผสมกับ แมลงปีกสวยที่ชอบดูดน้ำหวาน",
+      "ช้าง 🐘 + ผีเสื้อ 🦋"
+    ],
+    "options": [
+      "ช้างผีเสื้อ (ช้าง + ผีเสื้อ)",
+      "ช้างแมลงปอ (ช้าง + แมลงปอ)",
+      "ผีเสื้อสมุทร (ผีเสื้อ + พะยูน)",
+      "ช้างเพกาซัส (ช้าง + ม้าบิน)"
+    ],
+    "answerIndex": 0,
+    "acceptedKeywords": [
+      "ช้างผีเสื้อ",
+      "elefly",
+      "ele-fly",
+      "butterfly elephant",
+      "ช้างปีกผีเสื้อ",
+      "ผีเสื้อช้าง"
+    ],
+    "svg": "<svg viewBox=\"0 0 800 800\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <linearGradient id=\"jungleBg\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#064E3B\"/>\n      <stop offset=\"50%\" stop-color=\"#022C22\"/>\n      <stop offset=\"100%\" stop-color=\"#0F172A\"/>\n    </linearGradient>\n    <linearGradient id=\"morphoWing\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#38BDF8\"/>\n      <stop offset=\"40%\" stop-color=\"#0284C7\"/>\n      <stop offset=\"70%\" stop-color=\"#4F46E5\"/>\n      <stop offset=\"100%\" stop-color=\"#1E1B4B\"/>\n    </linearGradient>\n    <linearGradient id=\"elephantSkin\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#CBD5E1\"/>\n      <stop offset=\"60%\" stop-color=\"#94A3B8\"/>\n      <stop offset=\"100%\" stop-color=\"#64748B\"/>\n    </linearGradient>\n  </defs>\n  <rect width=\"800\" height=\"800\" fill=\"url(#jungleBg)\"/>\n  <!-- Glow Orbs / Fireflies -->\n  <circle cx=\"150\" cy=\"200\" r=\"6\" fill=\"#67E8F9\" opacity=\"0.8\"/>\n  <circle cx=\"680\" cy=\"180\" r=\"8\" fill=\"#F472B6\" opacity=\"0.7\"/>\n  <circle cx=\"200\" cy=\"650\" r=\"5\" fill=\"#A7F3D0\" opacity=\"0.8\"/>\n  <circle cx=\"700\" cy=\"550\" r=\"7\" fill=\"#FDE047\" opacity=\"0.8\"/>\n  <!-- GIANT BUTTERFLY WINGS (Left & Right) -->\n  <!-- Left Wing -->\n  <g transform=\"translate(360, 420)\">\n    <path d=\"M 0 0 C -120 -180 -300 -240 -340 -120 C -360 -40 -260 80 -140 100 C -220 180 -200 260 -100 240 C -40 220 -20 120 0 0 Z\" fill=\"url(#morphoWing)\" stroke=\"#38BDF8\" stroke-width=\"4\"/>\n    <path d=\"M 0 0 Q -180 -100 -260 -120\" stroke=\"#7DD3FC\" stroke-width=\"3\" fill=\"none\"/>\n    <path d=\"M 0 0 Q -120 60 -160 160\" stroke=\"#7DD3FC\" stroke-width=\"3\" fill=\"none\"/>\n    <circle cx=\"-300\" cy=\"-100\" r=\"8\" fill=\"#FFFFFF\"/>\n    <circle cx=\"-270\" cy=\"-30\" r=\"6\" fill=\"#FFFFFF\"/>\n    <circle cx=\"-160\" cy=\"180\" r=\"7\" fill=\"#FFFFFF\"/>\n  </g>\n  <!-- Right Wing -->\n  <g transform=\"translate(440, 420)\">\n    <path d=\"M 0 0 C 120 -180 300 -240 340 -120 C 360 -40 260 80 140 100 C 220 180 200 260 100 240 C 40 220 20 120 0 0 Z\" fill=\"url(#morphoWing)\" stroke=\"#38BDF8\" stroke-width=\"4\"/>\n    <path d=\"M 0 0 Q 180 -100 260 -120\" stroke=\"#7DD3FC\" stroke-width=\"3\" fill=\"none\"/>\n    <path d=\"M 0 0 Q 120 60 160 160\" stroke=\"#7DD3FC\" stroke-width=\"3\" fill=\"none\"/>\n    <circle cx=\"300\" cy=\"-100\" r=\"8\" fill=\"#FFFFFF\"/>\n    <circle cx=\"270\" cy=\"-30\" r=\"6\" fill=\"#FFFFFF\"/>\n    <circle cx=\"160\" cy=\"180\" r=\"7\" fill=\"#FFFFFF\"/>\n  </g>\n  <!-- Elephant Body -->\n  <ellipse cx=\"400\" cy=\"540\" rx=\"150\" ry=\"130\" fill=\"url(#elephantSkin)\"/>\n  <!-- Front Legs -->\n  <rect x=\"310\" y=\"580\" width=\"65\" height=\"130\" rx=\"30\" fill=\"#94A3B8\"/>\n  <ellipse cx=\"342\" cy=\"710\" rx=\"32\" ry=\"12\" fill=\"#64748B\"/>\n  <rect x=\"425\" y=\"580\" width=\"65\" height=\"130\" rx=\"30\" fill=\"#94A3B8\"/>\n  <ellipse cx=\"457\" cy=\"710\" rx=\"32\" ry=\"12\" fill=\"#64748B\"/>\n  <!-- Elephant Ears -->\n  <ellipse cx=\"280\" cy=\"380\" rx=\"90\" ry=\"110\" fill=\"#94A3B8\" transform=\"rotate(-15 280 380)\"/>\n  <ellipse cx=\"285\" cy=\"380\" rx=\"60\" ry=\"80\" fill=\"#F472B6\" opacity=\"0.6\" transform=\"rotate(-15 285 380)\"/>\n  <ellipse cx=\"520\" cy=\"380\" rx=\"90\" ry=\"110\" fill=\"#94A3B8\" transform=\"rotate(15 520 380)\"/>\n  <ellipse cx=\"515\" cy=\"380\" rx=\"60\" ry=\"80\" fill=\"#F472B6\" opacity=\"0.6\" transform=\"rotate(15 515 380)\"/>\n  <!-- Elephant Head -->\n  <circle cx=\"400\" cy=\"380\" r=\"110\" fill=\"url(#elephantSkin)\"/>\n  <!-- Eyes -->\n  <ellipse cx=\"355\" cy=\"355\" rx=\"16\" ry=\"20\" fill=\"#0F172A\"/>\n  <circle cx=\"350\" cy=\"348\" r=\"6\" fill=\"#FFFFFF\"/>\n  <ellipse cx=\"445\" cy=\"355\" rx=\"16\" ry=\"20\" fill=\"#0F172A\"/>\n  <circle cx=\"440\" cy=\"348\" r=\"6\" fill=\"#FFFFFF\"/>\n  <!-- Cheeks Blush -->\n  <ellipse cx=\"330\" cy=\"390\" rx=\"18\" ry=\"10\" fill=\"#FB7185\" opacity=\"0.7\"/>\n  <ellipse cx=\"470\" cy=\"390\" rx=\"18\" ry=\"10\" fill=\"#FB7185\" opacity=\"0.7\"/>\n  <!-- Trunk (Curled upward spraying sparkles) -->\n  <path d=\"M 380 410 C 370 480 380 540 430 520 C 470 500 450 440 410 440 C 390 440 395 470 415 470\" stroke=\"#94A3B8\" stroke-width=\"36\" fill=\"none\" stroke-linecap=\"round\"/>\n  <!-- Sparkling spray from trunk -->\n  <circle cx=\"420\" cy=\"410\" r=\"4\" fill=\"#67E8F9\"/>\n  <circle cx=\"435\" cy=\"390\" r=\"6\" fill=\"#A5F3FC\"/>\n  <circle cx=\"450\" cy=\"415\" r=\"4\" fill=\"#67E8F9\"/>\n  <circle cx=\"465\" cy=\"380\" r=\"5\" fill=\"#FFFFFF\"/>\n  <!-- Butterfly Antennae on Elephant Head -->\n  <path d=\"M 380 280 Q 340 210 320 220\" stroke=\"#38BDF8\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/>\n  <circle cx=\"320\" cy=\"220\" r=\"8\" fill=\"#F472B6\"/>\n  <path d=\"M 420 280 Q 460 210 480 220\" stroke=\"#38BDF8\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/>\n  <circle cx=\"480\" cy=\"220\" r=\"8\" fill=\"#F472B6\"/>\n  <!-- Badge -->\n  <g transform=\"translate(40, 50)\">\n    <rect width=\"260\" height=\"55\" rx=\"27.5\" fill=\"#0F172A\" opacity=\"0.85\" stroke=\"#38BDF8\" stroke-width=\"2\"/>\n    <text x=\"25\" y=\"36\" font-family=\"'Kanit', sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#7DD3FC\">🐘 + 🦋 ช้างผีเสื้อ</text>\n  </g>\n</svg>"
+  },
+  {
+    "id": 4,
+    "name": "วาฬกวิน (Peng-whale)",
+    "animal1": {
+      "name": "เพนกวิน (Penguin)",
+      "emoji": "🐧"
+    },
+    "animal2": {
+      "name": "วาฬเพชฌฆาต (Orca Whale)",
+      "emoji": "🐋"
+    },
+    "lore": "เจ้าแห่งมหาสมุทรขั้วโลก ลายตัวขาวดำทรงเสน่ห์เหมือนใส่ชุดทักซิโด้ มีครีบหลังและพ่นน้ำได้ แต่เดินเตาะแตะบนแผ่นน้ำแข็งได้เช่นกัน!",
+    "hints": [
+      "อาศัยอยู่ในแถบขั้วโลกหนาวเย็น ลำตัวมีแถบสีขาวดำเงางาม",
+      "นกที่บินไม่ได้แต่ว่ายน้ำเก่ง ผสมกับ นักล่ายักษ์แห่งท้องทะเล",
+      "เพนกวิน 🐧 + วาฬเพชฌฆาต 🐋"
+    ],
+    "options": [
+      "วาฬกวิน (เพนกวิน + วาฬเพชฌฆาต)",
+      "โลมากวิน (เพนกวิน + โลมา)",
+      "แมวน้ำเพนกวิน (แมวน้ำ + เพนกวิน)",
+      "ฉลามเพนกวิน (ฉลาม + เพนกวิน)"
+    ],
+    "answerIndex": 0,
+    "acceptedKeywords": [
+      "วาฬกวิน",
+      "pengwhale",
+      "peng-whale",
+      "orca penguin",
+      "เพนกวินวาฬ",
+      "วาฬเพนกวิน"
+    ],
+    "svg": "<svg viewBox=\"0 0 800 800\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <linearGradient id=\"arcticSky\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#042F2E\"/>\n      <stop offset=\"60%\" stop-color=\"#0F766E\"/>\n      <stop offset=\"100%\" stop-color=\"#14B8A6\"/>\n    </linearGradient>\n    <linearGradient id=\"iceColor\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#F0FDFA\"/>\n      <stop offset=\"100%\" stop-color=\"#99F6E4\"/>\n    </linearGradient>\n    <linearGradient id=\"orcaSkin\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#1E293B\"/>\n      <stop offset=\"100%\" stop-color=\"#020617\"/>\n    </linearGradient>\n    <linearGradient id=\"penguinChest\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#FBBF24\"/>\n      <stop offset=\"30%\" stop-color=\"#FEF08A\"/>\n      <stop offset=\"70%\" stop-color=\"#FFFFFF\"/>\n      <stop offset=\"100%\" stop-color=\"#E2E8F0\"/>\n    </linearGradient>\n  </defs>\n  <rect width=\"800\" height=\"800\" fill=\"url(#arcticSky)\"/>\n  <!-- Aurora Waves -->\n  <path d=\"M 0 150 Q 200 80 400 140 T 800 100 L 800 0 L 0 0 Z\" fill=\"#34D399\" opacity=\"0.35\"/>\n  <path d=\"M 0 200 Q 250 120 500 190 T 800 140 L 800 0 L 0 0 Z\" fill=\"#2DD4BF\" opacity=\"0.25\"/>\n  <!-- Icebergs in Background -->\n  <polygon points=\"50,480 160,340 240,490\" fill=\"url(#iceColor)\" opacity=\"0.9\"/>\n  <polygon points=\"600,500 680,360 760,490\" fill=\"url(#iceColor)\" opacity=\"0.9\"/>\n  <!-- Ocean Water Base -->\n  <rect y=\"480\" width=\"800\" height=\"320\" fill=\"#0C4A6E\"/>\n  <ellipse cx=\"400\" cy=\"560\" rx=\"360\" ry=\"80\" fill=\"#0369A1\"/>\n  <!-- Water Splash Ripples -->\n  <ellipse cx=\"400\" cy=\"560\" rx=\"260\" ry=\"40\" fill=\"none\" stroke=\"#E0F2FE\" stroke-width=\"8\"/>\n  <ellipse cx=\"400\" cy=\"570\" rx=\"310\" ry=\"50\" fill=\"none\" stroke=\"#BAE6FD\" stroke-width=\"5\"/>\n  <!-- Dorsal Fin of Orca on back -->\n  <path d=\"M 460 330 C 470 240 520 200 560 190 C 530 250 510 320 500 350 Z\" fill=\"url(#orcaSkin)\"/>\n  <!-- Peng-whale Body (Breaching upright) -->\n  <path d=\"M 400 200 C 500 210 560 300 540 450 C 530 520 480 580 400 580 C 320 580 270 520 260 450 C 240 300 300 210 400 200 Z\" fill=\"url(#orcaSkin)\"/>\n  <!-- Whale Tail at water line -->\n  <path d=\"M 330 560 C 260 620 220 640 180 620 C 230 590 280 570 330 560 Z\" fill=\"url(#orcaSkin)\"/>\n  <path d=\"M 470 560 C 540 620 580 640 620 620 C 570 590 520 570 470 560 Z\" fill=\"url(#orcaSkin)\"/>\n  <!-- Orca White Eye Patch -->\n  <ellipse cx=\"485\" cy=\"275\" rx=\"35\" ry=\"18\" fill=\"#FFFFFF\" transform=\"rotate(-25 485 275)\"/>\n  <ellipse cx=\"315\" cy=\"275\" rx=\"35\" ry=\"18\" fill=\"#FFFFFF\" transform=\"rotate(25 315 275)\"/>\n  <!-- Penguin White/Yellow Belly & Chest -->\n  <path d=\"M 400 280 C 460 290 475 360 460 490 C 450 560 350 560 340 490 C 325 360 340 290 400 280 Z\" fill=\"url(#penguinChest)\"/>\n  <!-- Penguin / Orca Flipper Wings -->\n  <path d=\"M 270 360 C 210 400 170 480 180 540 C 210 520 240 460 270 410 Z\" fill=\"url(#orcaSkin)\"/>\n  <path d=\"M 530 360 C 590 400 630 480 620 540 C 590 520 560 460 530 410 Z\" fill=\"url(#orcaSkin)\"/>\n  <!-- Penguin Eyes -->\n  <circle cx=\"360\" cy=\"285\" r=\"14\" fill=\"#0F172A\"/>\n  <circle cx=\"356\" cy=\"280\" r=\"5\" fill=\"#FFFFFF\"/>\n  <circle cx=\"440\" cy=\"285\" r=\"14\" fill=\"#0F172A\"/>\n  <circle cx=\"436\" cy=\"280\" r=\"5\" fill=\"#FFFFFF\"/>\n  <!-- Emperor Penguin Yellow Ear Swirls -->\n  <path d=\"M 310 260 Q 300 320 340 330\" stroke=\"#F59E0B\" stroke-width=\"12\" stroke-linecap=\"round\" fill=\"none\"/>\n  <path d=\"M 490 260 Q 500 320 460 330\" stroke=\"#F59E0B\" stroke-width=\"12\" stroke-linecap=\"round\" fill=\"none\"/>\n  <!-- Penguin Beak -->\n  <polygon points=\"380,310 420,310 400,355\" fill=\"#EA580C\"/>\n  <!-- Water spout from blowhole -->\n  <path d=\"M 400 195 Q 380 130 350 110 M 400 195 Q 420 130 450 110\" stroke=\"#E0F2FE\" stroke-width=\"6\" stroke-linecap=\"round\" fill=\"none\"/>\n  <circle cx=\"350\" cy=\"110\" r=\"5\" fill=\"#FFFFFF\"/>\n  <circle cx=\"450\" cy=\"110\" r=\"5\" fill=\"#FFFFFF\"/>\n  <!-- Badge -->\n  <g transform=\"translate(40, 50)\">\n    <rect width=\"250\" height=\"55\" rx=\"27.5\" fill=\"#0F172A\" opacity=\"0.85\" stroke=\"#2DD4BF\" stroke-width=\"2\"/>\n    <text x=\"25\" y=\"36\" font-family=\"'Kanit', sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#5EEAD4\">🐧 + 🐋 วาฬกวิน</text>\n  </g>\n</svg>"
+  },
+  {
+    "id": 5,
+    "name": "คอร์กี้เป็ด (Duck-Corgi)",
+    "animal1": {
+      "name": "สุนัขคอร์กี้ (Corgi)",
+      "emoji": "🐶"
+    },
+    "animal2": {
+      "name": "เป็ด (Duck)",
+      "emoji": "🦆"
+    },
+    "lore": "ความน่ารักเกินต้าน! รูปร่างเป็นน้องหมาคอร์กี้ขาสั้นก้นดุ๊กดิ๊ก แต่มีปากแบนสีส้มสดใสและเท้าพังผืด ว่ายน้ำลอยตุ๊บป่องได้ทั้งวัน!",
+    "hints": [
+      "มีหูตั้งแหลม ตัวสั้นป้อม แต่ปากแบนกว้างสีส้ม ร้องก๊าบ-โฮ่ง",
+      "สุนัขขาสั้นยอดนิยม ผสมกับ สัตว์ปีกที่ชอบว่ายน้ำในสระ",
+      "คอร์กี้ 🐶 + เป็ด 🦆"
+    ],
+    "options": [
+      "คอร์กี้เป็ด (คอร์กี้ + เป็ด)",
+      "หมาห่าน (สุนัข + ห่าน)",
+      "เป็ดชิบะ (ชิบะ + เป็ด)",
+      "ดอร์กี้ (หมาพุดเดิ้ล + เป็ด)"
+    ],
+    "answerIndex": 0,
+    "acceptedKeywords": [
+      "คอร์กี้เป็ด",
+      "เป็ดคอร์กี้",
+      "dorgi",
+      "duck corgi",
+      "corgi duck",
+      "หมาเป็ด",
+      "เป็ดหมา"
+    ],
+    "svg": "<svg viewBox=\"0 0 800 800\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <linearGradient id=\"pondSky\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#BAE6FD\"/>\n      <stop offset=\"60%\" stop-color=\"#E0F2FE\"/>\n      <stop offset=\"100%\" stop-color=\"#BBF7D0\"/>\n    </linearGradient>\n    <linearGradient id=\"corgiFur\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#F59E0B\"/>\n      <stop offset=\"100%\" stop-color=\"#D97706\"/>\n    </linearGradient>\n  </defs>\n  <rect width=\"800\" height=\"800\" fill=\"url(#pondSky)\"/>\n  <!-- Pond Water Base -->\n  <rect y=\"460\" width=\"800\" height=\"340\" fill=\"#0284C7\"/>\n  <ellipse cx=\"400\" cy=\"560\" rx=\"380\" ry=\"120\" fill=\"#0369A1\"/>\n  <!-- Water Lily Pads -->\n  <ellipse cx=\"160\" cy=\"540\" rx=\"70\" ry=\"30\" fill=\"#15803D\"/>\n  <circle cx=\"160\" cy=\"525\" r=\"14\" fill=\"#F472B6\"/>\n  <ellipse cx=\"650\" cy=\"620\" rx=\"85\" ry=\"35\" fill=\"#15803D\"/>\n  <!-- Rubber Duck Toy Floating -->\n  <g transform=\"translate(620, 480) scale(0.7)\">\n    <ellipse cx=\"50\" cy=\"50\" rx=\"40\" ry=\"25\" fill=\"#FACC15\"/>\n    <circle cx=\"70\" cy=\"30\" r=\"20\" fill=\"#FACC15\"/>\n    <polygon points=\"85,30 105,35 85,40\" fill=\"#FB923C\"/>\n    <circle cx=\"75\" cy=\"25\" r=\"3\" fill=\"#0F172A\"/>\n  </g>\n  <!-- Corgi Body (Loaf in water) -->\n  <ellipse cx=\"400\" cy=\"480\" rx=\"170\" ry=\"110\" fill=\"url(#corgiFur)\"/>\n  <path d=\"M 330 460 Q 400 520 470 460 Q 400 440 330 460 Z\" fill=\"#FFFFFF\"/>\n  <!-- Water ripples around corgi -->\n  <ellipse cx=\"400\" cy=\"560\" rx=\"220\" ry=\"35\" fill=\"none\" stroke=\"#BAE6FD\" stroke-width=\"6\"/>\n  <!-- Big Corgi Ears -->\n  <polygon points=\"290,280 230,120 360,200\" fill=\"#D97706\"/>\n  <polygon points=\"290,270 250,150 340,210\" fill=\"#FECDD3\"/>\n  <polygon points=\"510,280 570,120 440,200\" fill=\"#D97706\"/>\n  <polygon points=\"510,270 550,150 460,210\" fill=\"#FECDD3\"/>\n  <!-- Corgi Head -->\n  <ellipse cx=\"400\" cy=\"310\" rx=\"120\" ry=\"105\" fill=\"url(#corgiFur)\"/>\n  <!-- White Blaze on Face -->\n  <path d=\"M 380 210 Q 400 270 380 340 L 420 340 Q 400 270 420 210 Z\" fill=\"#FFFFFF\"/>\n  <ellipse cx=\"400\" cy=\"350\" rx=\"60\" ry=\"40\" fill=\"#FFFFFF\"/>\n  <!-- Big Puppy Eyes -->\n  <circle cx=\"345\" cy=\"295\" r=\"18\" fill=\"#451A03\"/>\n  <circle cx=\"340\" cy=\"290\" r=\"7\" fill=\"#FFFFFF\"/>\n  <circle cx=\"455\" cy=\"295\" r=\"18\" fill=\"#451A03\"/>\n  <circle cx=\"450\" cy=\"290\" r=\"7\" fill=\"#FFFFFF\"/>\n  <!-- DUCK BEAK (Orange Bill) -->\n  <ellipse cx=\"400\" cy=\"355\" rx=\"65\" ry=\"26\" fill=\"#FB923C\"/>\n  <path d=\"M 345 355 Q 400 375 455 355\" stroke=\"#C2410C\" stroke-width=\"4\" fill=\"none\"/>\n  <ellipse cx=\"385\" cy=\"346\" rx=\"4\" ry=\"2\" fill=\"#7C2D12\"/>\n  <ellipse cx=\"415\" cy=\"346\" rx=\"4\" ry=\"2\" fill=\"#7C2D12\"/>\n  <!-- Orange Webbed Duck Feet (paddling in water) -->\n  <g transform=\"translate(300, 560)\">\n    <polygon points=\"0,0 -40,30 -20,40 0,25 20,40 40,30\" fill=\"#FB923C\"/>\n  </g>\n  <g transform=\"translate(500, 560)\">\n    <polygon points=\"0,0 -40,30 -20,40 0,25 20,40 40,30\" fill=\"#FB923C\"/>\n  </g>\n  <!-- Badge -->\n  <g transform=\"translate(40, 50)\">\n    <rect width=\"260\" height=\"55\" rx=\"27.5\" fill=\"#0F172A\" opacity=\"0.85\" stroke=\"#FB923C\" stroke-width=\"2\"/>\n    <text x=\"25\" y=\"36\" font-family=\"'Kanit', sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#FDBA74\">🐶 + 🦆 คอร์กี้เป็ด</text>\n  </g>\n</svg>"
+  },
+  {
+    "id": 6,
+    "name": "จระราฟ (Croc-o-raffe)",
+    "animal1": {
+      "name": "จระเข้ (Crocodile)",
+      "emoji": "🐊"
+    },
+    "animal2": {
+      "name": "ยีราฟ (Giraffe)",
+      "emoji": "🦒"
+    },
+    "lore": "สิ่งมีชีวิตสุดฮาแห่งทุ่งหญ้าสะวันนา คอยาวลายจุดสีน้ำตาลสูงเสียดฟ้า แต่บนยอดคอมีหัวเป็นจระเข้ฟันแหลมเฟี้ยวพร้อมเกล็ดหนา!",
+    "hints": [
+      "คอยาวลายจุดสีเหลืองน้ำตาล แต่หัวมีฟันแหลมคมเหมือนสัตว์เลื้อยคลาน",
+      "สัตว์บกที่สูงที่สุด ผสมกับ สัตว์เลื้อยคลานนักล่าแห่งลุ่มน้ำ",
+      "จระเข้ 🐊 + ยีราฟ 🦒"
+    ],
+    "options": [
+      "จระราฟ (จระเข้ + ยีราฟ)",
+      "ไดโนยีราฟ (ไดโนเสาร์ + ยีราฟ)",
+      "ยีราฟงู (งูเหลือม + ยีราฟ)",
+      "ตะโขงยีราฟ (ตะโขง + ยีราฟ)"
+    ],
+    "answerIndex": 0,
+    "acceptedKeywords": [
+      "จระราฟ",
+      "crocoraffe",
+      "croc-o-raffe",
+      "giraffe crocodile",
+      "จระเข้ยีราฟ",
+      "ยีราฟจระเข้"
+    ],
+    "svg": "<svg viewBox=\"0 0 800 800\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <linearGradient id=\"savannaSky\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#C2410C\"/>\n      <stop offset=\"50%\" stop-color=\"#EA580C\"/>\n      <stop offset=\"100%\" stop-color=\"#FBBF24\"/>\n    </linearGradient>\n    <linearGradient id=\"giraffeNeck\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"0\">\n      <stop offset=\"0%\" stop-color=\"#FDE047\"/>\n      <stop offset=\"100%\" stop-color=\"#EAB308\"/>\n    </linearGradient>\n    <linearGradient id=\"crocGreen\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#22C55E\"/>\n      <stop offset=\"100%\" stop-color=\"#15803D\"/>\n    </linearGradient>\n  </defs>\n  <rect width=\"800\" height=\"800\" fill=\"url(#savannaSky)\"/>\n  <!-- Acacia Tree Silhouette -->\n  <g transform=\"translate(100, 480)\" fill=\"#451A03\">\n    <path d=\"M 0 200 L 10 100 L -40 40 L -100 20 L -90 10 L -30 25 L 15 80 L 30 30 L 60 10 L 70 20 L 35 75 L 45 100 L 50 200 Z\"/>\n    <ellipse cx=\"-70\" cy=\"15\" rx=\"50\" ry=\"12\"/>\n    <ellipse cx=\"50\" cy=\"15\" rx=\"60\" ry=\"14\"/>\n  </g>\n  <!-- Long Giraffe Neck -->\n  <path d=\"M 430 750 L 370 260 L 450 260 L 530 750 Z\" fill=\"url(#giraffeNeck)\"/>\n  <!-- Crocodile Spikes (Scutes) along the back of neck -->\n  <polygon points=\"370,280 340,300 373,320\" fill=\"#166534\"/>\n  <polygon points=\"378,340 345,360 382,380\" fill=\"#166534\"/>\n  <polygon points=\"386,400 350,420 390,440\" fill=\"#166534\"/>\n  <polygon points=\"395,460 355,480 400,500\" fill=\"#166534\"/>\n  <polygon points=\"405,520 365,540 410,560\" fill=\"#166534\"/>\n  <polygon points=\"415,580 375,600 420,620\" fill=\"#166534\"/>\n  <polygon points=\"425,640 385,660 430,680\" fill=\"#166534\"/>\n  <!-- Giraffe Brown Spots on Neck -->\n  <polygon points=\"400,310 430,305 440,335 410,340\" fill=\"#78350F\"/>\n  <polygon points=\"390,370 425,365 445,410 405,415\" fill=\"#78350F\"/>\n  <polygon points=\"415,440 465,430 480,480 425,490\" fill=\"#78350F\"/>\n  <polygon points=\"420,520 480,510 495,570 435,580\" fill=\"#78350F\"/>\n  <polygon points=\"440,610 505,600 520,660 450,670\" fill=\"#78350F\"/>\n  <!-- CROCODILE HEAD AT TOP -->\n  <g transform=\"translate(410, 240)\">\n    <!-- Jaws -->\n    <path d=\"M -80 0 C -40 -30 60 -40 160 -10 C 180 0 170 30 140 35 C 80 40 -20 30 -80 0 Z\" fill=\"url(#crocGreen)\"/>\n    <path d=\"M -80 0 C 0 30 80 40 140 35 L 120 60 C 60 65 -20 50 -80 15 Z\" fill=\"#15803D\"/>\n    <!-- Pointy White Teeth -->\n    <polygon points=\"20,15 30,30 40,15\" fill=\"#FFFFFF\"/>\n    <polygon points=\"60,18 70,33 80,18\" fill=\"#FFFFFF\"/>\n    <polygon points=\"100,20 110,35 120,20\" fill=\"#FFFFFF\"/>\n    <polygon points=\"135,15 142,30 150,15\" fill=\"#FFFFFF\"/>\n    <!-- Yellow Reptile Eye with vertical slit -->\n    <ellipse cx=\"-10\" cy=\"-25\" rx=\"20\" ry=\"18\" fill=\"#FEF08A\"/>\n    <ellipse cx=\"-10\" cy=\"-25\" rx=\"6\" ry=\"16\" fill=\"#0F172A\"/>\n    <!-- Nostril -->\n    <circle cx=\"150\" cy=\"-5\" r=\"4\" fill=\"#064E3B\"/>\n    <!-- Giraffe Horns (Ossicones) on Croc Head! -->\n    <path d=\"M -50 -25 L -60 -70\" stroke=\"#78350F\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <circle cx=\"-60\" cy=\"-70\" r=\"10\" fill=\"#451A03\"/>\n    <path d=\"M -25 -25 L -30 -75\" stroke=\"#78350F\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <circle cx=\"-30\" cy=\"-75\" r=\"10\" fill=\"#451A03\"/>\n  </g>\n  <!-- Savanna Ground -->\n  <rect y=\"720\" width=\"800\" height=\"80\" fill=\"#78350F\"/>\n  <rect y=\"740\" width=\"800\" height=\"60\" fill=\"#451A03\"/>\n  <!-- Badge -->\n  <g transform=\"translate(40, 50)\">\n    <rect width=\"250\" height=\"55\" rx=\"27.5\" fill=\"#0F172A\" opacity=\"0.85\" stroke=\"#22C55E\" stroke-width=\"2\"/>\n    <text x=\"25\" y=\"36\" font-family=\"'Kanit', sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#86EFAC\">🐊 + 🦒 จระราฟ</text>\n  </g>\n</svg>"
+  },
+  {
+    "id": 7,
+    "name": "เสือผึ้ง (Bumble-Tiger)",
+    "animal1": {
+      "name": "เสือโคร่ง (Tiger)",
+      "emoji": "🐯"
+    },
+    "animal2": {
+      "name": "ผึ้ง (Bumblebee)",
+      "emoji": "🐝"
+    },
+    "lore": "สัตว์ตัวกลมปุกปุยลายพาดกลอนส้มดำ มีปีกใสกระพือเสียงหึ่งๆ ดุร้ายแต่รักสงบ ชอบดมเกสรดอกไม้และกินน้ำผึ้งเป็นชีวิตจิตใจ!",
+    "hints": [
+      "ตัวกลมลายขวางสีส้มสลับดำ มีปีกบินได้และมีเขี้ยวเสือ",
+      "นักล่าลายพาดกลอน ผสมกับ แมลงสร้างน้ำหวานขยันขันแข็ง",
+      "เสือ 🐯 + ผึ้ง 🐝"
+    ],
+    "options": [
+      "เสือผึ้ง (เสือโคร่ง + ผึ้ง)",
+      "เสือแตน (เสือดาว + แตน)",
+      "ผึ้งสิงโต (สิงโต + ผึ้ง)",
+      "แมลงภู่เสือ (เสือ + แมลงภู่)"
+    ],
+    "answerIndex": 0,
+    "acceptedKeywords": [
+      "เสือผึ้ง",
+      "ผึ้งเสือ",
+      "bumble-tiger",
+      "bumble tiger",
+      "tiger bee",
+      "เสือผสมผึ้ง"
+    ],
+    "svg": "<svg viewBox=\"0 0 800 800\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <linearGradient id=\"meadowSky\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#38BDF8\"/>\n      <stop offset=\"60%\" stop-color=\"#BAE6FD\"/>\n      <stop offset=\"100%\" stop-color=\"#FEF08A\"/>\n    </linearGradient>\n    <linearGradient id=\"tigerOrange\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#FB923C\"/>\n      <stop offset=\"50%\" stop-color=\"#F97316\"/>\n      <stop offset=\"100%\" stop-color=\"#C2410C\"/>\n    </linearGradient>\n    <linearGradient id=\"beeWing\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#FFFFFF\" stop-opacity=\"0.8\"/>\n      <stop offset=\"100%\" stop-color=\"#38BDF8\" stop-opacity=\"0.3\"/>\n    </linearGradient>\n  </defs>\n  <rect width=\"800\" height=\"800\" fill=\"url(#meadowSky)\"/>\n  <!-- Giant Sunflowers in background -->\n  <g transform=\"translate(140, 680) scale(0.8)\">\n    <circle cx=\"0\" cy=\"0\" r=\"100\" fill=\"#EAB308\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"60\" fill=\"#713F12\"/>\n  </g>\n  <g transform=\"translate(680, 650) scale(0.9)\">\n    <circle cx=\"0\" cy=\"0\" r=\"100\" fill=\"#EAB308\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"60\" fill=\"#713F12\"/>\n  </g>\n  <!-- Gossamer Bee Wings Buzzing -->\n  <g transform=\"translate(360, 320) rotate(-35)\">\n    <ellipse cx=\"0\" cy=\"-120\" rx=\"60\" ry=\"140\" fill=\"url(#beeWing)\" stroke=\"#38BDF8\" stroke-width=\"3\"/>\n    <line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"-240\" stroke=\"#BAE6FD\" stroke-width=\"2\"/>\n  </g>\n  <g transform=\"translate(440, 320) rotate(35)\">\n    <ellipse cx=\"0\" cy=\"-120\" rx=\"60\" ry=\"140\" fill=\"url(#beeWing)\" stroke=\"#38BDF8\" stroke-width=\"3\"/>\n    <line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"-240\" stroke=\"#BAE6FD\" stroke-width=\"2\"/>\n  </g>\n  <!-- Plump Fuzzy Bumblebee Abdomen with TIGER STRIPES -->\n  <ellipse cx=\"400\" cy=\"510\" rx=\"160\" ry=\"130\" fill=\"url(#tigerOrange)\"/>\n  <!-- Black Tiger/Bee Stripes -->\n  <path d=\"M 300 420 Q 400 450 500 420 L 515 450 Q 400 480 285 450 Z\" fill=\"#0F172A\"/>\n  <path d=\"M 260 480 Q 400 520 540 480 L 550 515 Q 400 560 250 515 Z\" fill=\"#0F172A\"/>\n  <path d=\"M 280 550 Q 400 590 520 550 L 505 585 Q 400 625 295 585 Z\" fill=\"#0F172A\"/>\n  <!-- Tiger Tail ending in a Sharp Bee Stinger! -->\n  <path d=\"M 400 640 C 430 700 470 720 520 700 C 540 690 545 670 530 670 C 490 680 460 660 435 630 Z\" fill=\"url(#tigerOrange)\"/>\n  <polygon points=\"530,670 570,685 535,705\" fill=\"#0F172A\"/>\n  <!-- TIGER HEAD -->\n  <circle cx=\"400\" cy=\"330\" r=\"110\" fill=\"url(#tigerOrange)\"/>\n  <!-- Round Tiger Ears -->\n  <circle cx=\"310\" cy=\"240\" r=\"35\" fill=\"url(#tigerOrange)\"/>\n  <circle cx=\"310\" cy=\"240\" r=\"20\" fill=\"#0F172A\"/>\n  <circle cx=\"490\" cy=\"240\" r=\"35\" fill=\"url(#tigerOrange)\"/>\n  <circle cx=\"490\" cy=\"240\" r=\"20\" fill=\"#0F172A\"/>\n  <!-- Forehead Tiger Stripes -->\n  <polygon points=\"400,240 395,270 405,270\" fill=\"#0F172A\"/>\n  <polygon points=\"370,250 380,280 390,265\" fill=\"#0F172A\"/>\n  <polygon points=\"430,250 420,280 410,265\" fill=\"#0F172A\"/>\n  <!-- Tiger Snout / Muzzle -->\n  <ellipse cx=\"400\" cy=\"370\" rx=\"50\" ry=\"35\" fill=\"#FFFFFF\"/>\n  <polygon points=\"390,345 410,345 400,360\" fill=\"#F472B6\"/>\n  <!-- Fangs -->\n  <polygon points=\"380,380 386,395 392,380\" fill=\"#FFFFFF\"/>\n  <polygon points=\"408,380 414,395 420,380\" fill=\"#FFFFFF\"/>\n  <!-- Eyes -->\n  <ellipse cx=\"355\" cy=\"315\" rx=\"16\" ry=\"14\" fill=\"#FEF08A\"/>\n  <ellipse cx=\"355\" cy=\"315\" rx=\"6\" ry=\"12\" fill=\"#0F172A\"/>\n  <ellipse cx=\"445\" cy=\"315\" rx=\"16\" ry=\"14\" fill=\"#FEF08A\"/>\n  <ellipse cx=\"445\" cy=\"315\" rx=\"6\" ry=\"12\" fill=\"#0F172A\"/>\n  <!-- Whiskers -->\n  <line x1=\"340\" y1=\"365\" x2=\"260\" y2=\"355\" stroke=\"#FFFFFF\" stroke-width=\"3\"/>\n  <line x1=\"340\" y1=\"375\" x2=\"250\" y2=\"380\" stroke=\"#FFFFFF\" stroke-width=\"3\"/>\n  <line x1=\"460\" y1=\"365\" x2=\"540\" y2=\"355\" stroke=\"#FFFFFF\" stroke-width=\"3\"/>\n  <line x1=\"460\" y1=\"375\" x2=\"550\" y2=\"380\" stroke=\"#FFFFFF\" stroke-width=\"3\"/>\n  <!-- Bee Antennae with cute fur -->\n  <path d=\"M 380 230 Q 360 170 340 180\" stroke=\"#0F172A\" stroke-width=\"5\" fill=\"none\"/>\n  <circle cx=\"340\" cy=\"180\" r=\"8\" fill=\"#FBBF24\"/>\n  <path d=\"M 420 230 Q 440 170 460 180\" stroke=\"#0F172A\" stroke-width=\"5\" fill=\"none\"/>\n  <circle cx=\"460\" cy=\"180\" r=\"8\" fill=\"#FBBF24\"/>\n  <!-- Badge -->\n  <g transform=\"translate(40, 50)\">\n    <rect width=\"250\" height=\"55\" rx=\"27.5\" fill=\"#0F172A\" opacity=\"0.85\" stroke=\"#F97316\" stroke-width=\"2\"/>\n    <text x=\"25\" y=\"36\" font-family=\"'Kanit', sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#FDBA74\">🐯 + 🐝 เสือผึ้ง</text>\n  </g>\n</svg>"
+  },
+  {
+    "id": 8,
+    "name": "มังกรต่าย (Dragon-Bunny)",
+    "animal1": {
+      "name": "กระต่าย (Rabbit)",
+      "emoji": "🐰"
+    },
+    "animal2": {
+      "name": "มังกร (Dragon)",
+      "emoji": "🐉"
+    },
+    "lore": "กระต่ายน้อยขนปุยสีขาวตาสีทับทิม แต่มีเขามังกร ปีกค้างคาว และหางมีเกล็ด เวลาจามจะพ่นไฟดวงเล็กๆ ออกมาอย่างน่าเอ็นดู!",
+    "hints": [
+      "ตัวสีขาวขนฟูนุ่มหูยาว แต่มีปีก มีเขา และพ่นไฟได้",
+      "สัตว์เลี้ยงขนปุยน่ารัก ผสมกับ สัตว์ในตำนานพ่นไฟผู้ยิ่งใหญ่",
+      "กระต่าย 🐰 + มังกร 🐉"
+    ],
+    "options": [
+      "มังกรต่าย (กระต่าย + มังกร)",
+      "กระต่ายบิน (กระต่าย + ค้างคาว)",
+      "มังกรหนู (หนูแฮมสเตอร์ + มังกร)",
+      "กวางมังกร (กวาง + มังกร)"
+    ],
+    "answerIndex": 0,
+    "acceptedKeywords": [
+      "มังกรต่าย",
+      "กระต่ายมังกร",
+      "bunny dragon",
+      "dragon bunny",
+      "rabbit dragon",
+      "กระต่ายพ่นไฟ"
+    ],
+    "svg": "<svg viewBox=\"0 0 800 800\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <linearGradient id=\"caveBg\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#2E1065\"/>\n      <stop offset=\"50%\" stop-color=\"#4C1D95\"/>\n      <stop offset=\"100%\" stop-color=\"#0F172A\"/>\n    </linearGradient>\n    <linearGradient id=\"dragonWingGrad\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#FDA4AF\"/>\n      <stop offset=\"60%\" stop-color=\"#E11D48\"/>\n      <stop offset=\"100%\" stop-color=\"#881337\"/>\n    </linearGradient>\n    <linearGradient id=\"bunnyFur\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#FFFFFF\"/>\n      <stop offset=\"100%\" stop-color=\"#E2E8F0\"/>\n    </linearGradient>\n  </defs>\n  <rect width=\"800\" height=\"800\" fill=\"url(#caveBg)\"/>\n  <!-- Glowing Crystals in Cave -->\n  <polygon points=\"80,680 110,540 140,680\" fill=\"#C084FC\" opacity=\"0.8\"/>\n  <polygon points=\"120,680 150,570 170,680\" fill=\"#E879F9\" opacity=\"0.8\"/>\n  <polygon points=\"680,680 710,520 740,680\" fill=\"#C084FC\" opacity=\"0.8\"/>\n  <!-- Dragon Wings (Spreading behind bunny) -->\n  <g transform=\"translate(350, 420)\">\n    <path d=\"M 0 0 L -120 -150 L -180 -140 L -240 -80 Q -180 -20 -160 50 Q -80 20 0 0 Z\" fill=\"url(#dragonWingGrad)\" stroke=\"#BE123C\" stroke-width=\"3\"/>\n    <line x1=\"0\" y1=\"0\" x2=\"-180\" y2=\"-140\" stroke=\"#FFF1F2\" stroke-width=\"3\"/>\n    <line x1=\"0\" y1=\"0\" x2=\"-240\" y2=\"-80\" stroke=\"#FFF1F2\" stroke-width=\"3\"/>\n  </g>\n  <g transform=\"translate(450, 420)\">\n    <path d=\"M 0 0 L 120 -150 L 180 -140 L 240 -80 Q 180 -20 160 50 Q 80 20 0 0 Z\" fill=\"url(#dragonWingGrad)\" stroke=\"#BE123C\" stroke-width=\"3\"/>\n    <line x1=\"0\" y1=\"0\" x2=\"180\" y2=\"-140\" stroke=\"#FFF1F2\" stroke-width=\"3\"/>\n    <line x1=\"0\" y1=\"0\" x2=\"240\" y2=\"-80\" stroke=\"#FFF1F2\" stroke-width=\"3\"/>\n  </g>\n  <!-- Bunny Body -->\n  <ellipse cx=\"400\" cy=\"530\" rx=\"140\" ry=\"130\" fill=\"url(#bunnyFur)\"/>\n  <!-- Dragon Scaly Tail -->\n  <path d=\"M 520 560 Q 640 580 660 520 Q 670 480 640 460\" stroke=\"#E11D48\" stroke-width=\"24\" fill=\"none\" stroke-linecap=\"round\"/>\n  <!-- Dragon Tail Spade Tip -->\n  <polygon points=\"640,460 620,420 670,440\" fill=\"#BE123C\"/>\n  <!-- Paws -->\n  <ellipse cx=\"340\" cy=\"640\" rx=\"35\" ry=\"20\" fill=\"#FFFFFF\"/>\n  <ellipse cx=\"460\" cy=\"640\" rx=\"35\" ry=\"20\" fill=\"#FFFFFF\"/>\n  <!-- Big Bunny Ears with Pink Inside -->\n  <g transform=\"translate(330, 260) rotate(-20)\">\n    <ellipse cx=\"0\" cy=\"-110\" rx=\"40\" ry=\"120\" fill=\"url(#bunnyFur)\"/>\n    <ellipse cx=\"0\" cy=\"-110\" rx=\"22\" ry=\"90\" fill=\"#FDA4AF\"/>\n  </g>\n  <g transform=\"translate(470, 260) rotate(20)\">\n    <ellipse cx=\"0\" cy=\"-110\" rx=\"40\" ry=\"120\" fill=\"url(#bunnyFur)\"/>\n    <ellipse cx=\"0\" cy=\"-110\" rx=\"22\" ry=\"90\" fill=\"#FDA4AF\"/>\n  </g>\n  <!-- Curved Ruby Dragon Horns -->\n  <path d=\"M 360 260 Q 340 180 300 160 Q 320 210 370 270 Z\" fill=\"#991B1B\"/>\n  <path d=\"M 440 260 Q 460 180 500 160 Q 480 210 430 270 Z\" fill=\"#991B1B\"/>\n  <!-- Bunny Head -->\n  <circle cx=\"400\" cy=\"360\" r=\"110\" fill=\"url(#bunnyFur)\"/>\n  <!-- Ruby Red Eyes -->\n  <circle cx=\"350\" cy=\"340\" r=\"18\" fill=\"#DC2626\"/>\n  <circle cx=\"345\" cy=\"335\" r=\"7\" fill=\"#FFFFFF\"/>\n  <circle cx=\"450\" cy=\"340\" r=\"18\" fill=\"#DC2626\"/>\n  <circle cx=\"445\" cy=\"335\" r=\"7\" fill=\"#FFFFFF\"/>\n  <!-- Nose & Mouth -->\n  <polygon points=\"392,380 408,380 400,390\" fill=\"#F43F5E\"/>\n  <path d=\"M 390 395 Q 400 405 410 395\" stroke=\"#94A3B8\" stroke-width=\"3\" fill=\"none\"/>\n  <!-- Sneezing a tiny heart-shaped magical flame! -->\n  <path d=\"M 400 420 C 370 410 370 440 400 470 C 430 440 430 410 400 420 Z\" fill=\"#F43F5E\"/>\n  <circle cx=\"380\" cy=\"450\" r=\"4\" fill=\"#FDE047\"/>\n  <circle cx=\"420\" cy=\"450\" r=\"4\" fill=\"#FDE047\"/>\n  <!-- Badge -->\n  <g transform=\"translate(40, 50)\">\n    <rect width=\"260\" height=\"55\" rx=\"27.5\" fill=\"#0F172A\" opacity=\"0.85\" stroke=\"#F43F5E\" stroke-width=\"2\"/>\n    <text x=\"25\" y=\"36\" font-family=\"'Kanit', sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#FDA4AF\">🐰 + 🐉 มังกรต่าย</text>\n  </g>\n</svg>"
+  },
+  {
+    "id": 9,
+    "name": "ม้าฉลาม (Shark-Horse)",
+    "animal1": {
+      "name": "ม้า (Horse)",
+      "emoji": "🐴"
+    },
+    "animal2": {
+      "name": "ฉลามขาว (Great White Shark)",
+      "emoji": "🦈"
+    },
+    "lore": "อาชาศึกแห่งท้องทะเลลึก ลำตัววิ่งควบผ่านเกลียวคลื่นอย่างสง่างาม แต่หัวเป็นฉลามขาวฟันคมกริบพร้อมครีบหลังแหวกว่ายน้ำด้วยความเร็วแสง!",
+    "hints": [
+      "วิ่งควบในน้ำได้เหมือนอาชา แต่หัวมีฟันแหลมหลายแถวและมีเหงือก",
+      "สัตว์พาหนะฝีเท้าไว ผสมกับ เจ้าสมุทรนักล่าฟันคม",
+      "ม้า 🐴 + ฉลาม 🦈"
+    ],
+    "options": [
+      "ม้าฉลาม (ม้า + ฉลามขาว)",
+      "ม้าน้ำยักษ์ (ม้าน้ำ + ปลาวาฬ)",
+      "ฮิปโปฉลาม (ฮิปโป + ฉลาม)",
+      "สิงโตทะเลม้า (ม้า + สิงโตทะเล)"
+    ],
+    "answerIndex": 0,
+    "acceptedKeywords": [
+      "ม้าฉลาม",
+      "ฉลามม้า",
+      "shark horse",
+      "horse shark",
+      "hipposhark",
+      "ม้าผสมฉลาม"
+    ],
+    "svg": "<svg viewBox=\"0 0 800 800\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <linearGradient id=\"stormSky\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#020617\"/>\n      <stop offset=\"60%\" stop-color=\"#1E1B4B\"/>\n      <stop offset=\"100%\" stop-color=\"#0E7490\"/>\n    </linearGradient>\n    <linearGradient id=\"horseSkin\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#334155\"/>\n      <stop offset=\"50%\" stop-color=\"#1E293B\"/>\n      <stop offset=\"100%\" stop-color=\"#0F172A\"/>\n    </linearGradient>\n  </defs>\n  <rect width=\"800\" height=\"800\" fill=\"url(#stormSky)\"/>\n  <!-- Lightning Bolt -->\n  <polyline points=\"200,40 180,120 210,130 170,220\" stroke=\"#A5F3FC\" stroke-width=\"4\" fill=\"none\"/>\n  <!-- Bioluminescent Ocean Waves -->\n  <path d=\"M 0 540 Q 200 480 400 550 T 800 520 L 800 800 L 0 800 Z\" fill=\"#0C4A6E\"/>\n  <path d=\"M 0 600 Q 250 560 500 620 T 800 580\" stroke=\"#22D3EE\" stroke-width=\"8\" fill=\"none\"/>\n  <!-- Galloping Horse Hindquarters & Legs -->\n  <path d=\"M 220 480 C 180 520 160 620 200 680 L 220 680 L 240 580 C 300 560 340 520 360 480 Z\" fill=\"url(#horseSkin)\"/>\n  <ellipse cx=\"210\" cy=\"680\" rx=\"18\" ry=\"10\" fill=\"#020617\"/>\n  <!-- Galloping Front Leg -->\n  <path d=\"M 380 500 L 420 640 L 440 640 L 430 520 Z\" fill=\"url(#horseSkin)\"/>\n  <ellipse cx=\"430\" cy=\"640\" rx=\"18\" ry=\"10\" fill=\"#020617\"/>\n  <!-- Horse Flowing Tail -->\n  <path d=\"M 180 480 C 100 500 60 560 80 640 C 120 600 150 540 190 510 Z\" fill=\"#0284C7\"/>\n  <!-- Shark Dorsal Fin on Back -->\n  <path d=\"M 320 370 C 340 280 390 240 430 230 C 400 300 380 360 370 390 Z\" fill=\"url(#horseSkin)\"/>\n  <!-- Torso & Shark Body Transition -->\n  <path d=\"M 220 470 C 260 430 340 420 430 430 C 500 440 560 400 620 360 C 580 460 480 530 350 520 Z\" fill=\"url(#horseSkin)\"/>\n  <!-- GREAT WHITE SHARK HEAD -->\n  <g transform=\"translate(480, 360)\">\n    <!-- Shark Snout Cone -->\n    <path d=\"M 0 40 C 60 40 140 20 200 -20 C 150 -50 80 -60 0 -50 Z\" fill=\"#475569\"/>\n    <path d=\"M 0 40 C 80 40 140 10 200 -20 L 150 15 C 80 40 40 45 0 45 Z\" fill=\"#F8FAFC\"/>\n    <!-- Razor Shark Teeth -->\n    <polygon points=\"120,5 128,20 136,5\" fill=\"#FFFFFF\"/>\n    <polygon points=\"145,-2 153,14 161,-2\" fill=\"#FFFFFF\"/>\n    <polygon points=\"170,-10 176,5 184,-10\" fill=\"#FFFFFF\"/>\n    <!-- Cold Dark Shark Eye -->\n    <circle cx=\"120\" cy=\"-30\" r=\"10\" fill=\"#020617\"/>\n    <circle cx=\"118\" cy=\"-32\" r=\"3\" fill=\"#FFFFFF\"/>\n    <!-- Shark Gill Slits -->\n    <line x1=\"20\" y1=\"-20\" x2=\"15\" y2=\"15\" stroke=\"#0F172A\" stroke-width=\"4\"/>\n    <line x1=\"35\" y1=\"-22\" x2=\"30\" y2=\"13\" stroke=\"#0F172A\" stroke-width=\"4\"/>\n    <line x1=\"50\" y1=\"-24\" x2=\"45\" y2=\"10\" stroke=\"#0F172A\" stroke-width=\"4\"/>\n  </g>\n  <!-- Water Splash / Foam -->\n  <ellipse cx=\"210\" cy=\"690\" rx=\"30\" ry=\"8\" fill=\"#E0F2FE\"/>\n  <ellipse cx=\"430\" cy=\"650\" rx=\"30\" ry=\"8\" fill=\"#E0F2FE\"/>\n  <!-- Badge -->\n  <g transform=\"translate(40, 50)\">\n    <rect width=\"250\" height=\"55\" rx=\"27.5\" fill=\"#0F172A\" opacity=\"0.85\" stroke=\"#22D3EE\" stroke-width=\"2\"/>\n    <text x=\"25\" y=\"36\" font-family=\"'Kanit', sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#67E8F9\">🐴 + 🦈 ม้าฉลาม</text>\n  </g>\n</svg>"
+  },
+  {
+    "id": 10,
+    "name": "แพนด้าเลียน (Panda-leon)",
+    "animal1": {
+      "name": "หมีแพนด้า (Giant Panda)",
+      "emoji": "🐼"
+    },
+    "animal2": {
+      "name": "กิ้งก่าคาเมเลียน (Chameleon)",
+      "emoji": "🦎"
+    },
+    "lore": "หมีแพนด้าจอมขี้เกียจที่มีหางม้วนเกาะต้นไผ่ ตาหมุนได้ 360 องศา และมีลิ้นเหนียวยาวเฟื้อยตวัดจับใบไผ่และแมลงได้โดยไม่ต้องลุกเดิน!",
+    "hints": [
+      "ตัวลายขาวดำขอบตาดำ แต่มีหางม้วนเกาะกิ่งไม้และลิ้นยาวมาก",
+      "หมีกินไผ่ยอดนิยม ผสมกับ กิ้งก่าเปลี่ยนสีตาหมุนได้อิสระ",
+      "แพนด้า 🐼 + กิ้งก่าคาเมเลียน 🦎"
+    ],
+    "options": [
+      "แพนด้าเลียน (แพนด้า + คาเมเลียน)",
+      "แพนด้าตุ๊กแก (แพนด้า + ตุ๊กแก)",
+      "กิ้งก่าหมี (หมีขั้วโลก + กิ้งก่า)",
+      "โคอาล่าเลียน (โคอาล่า + คาเมเลียน)"
+    ],
+    "answerIndex": 0,
+    "acceptedKeywords": [
+      "แพนด้าเลียน",
+      "pandaleon",
+      "panda chameleon",
+      "แพนด้ากิ้งก่า",
+      "กิ้งก่าแพนด้า"
+    ],
+    "svg": "<svg viewBox=\"0 0 800 800\" xmlns=\"http://www.w3.org/2000/svg\">\n  <defs>\n    <linearGradient id=\"bambooForest\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#064E3B\"/>\n      <stop offset=\"60%\" stop-color=\"#022C22\"/>\n      <stop offset=\"100%\" stop-color=\"#065F46\"/>\n    </linearGradient>\n    <linearGradient id=\"bambooStalk\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"0\">\n      <stop offset=\"0%\" stop-color=\"#4ADE80\"/>\n      <stop offset=\"50%\" stop-color=\"#22C55E\"/>\n      <stop offset=\"100%\" stop-color=\"#15803D\"/>\n    </linearGradient>\n  </defs>\n  <rect width=\"800\" height=\"800\" fill=\"url(#bambooForest)\"/>\n  <!-- Bamboo Stalks in Background -->\n  <g fill=\"url(#bambooStalk)\">\n    <rect x=\"80\" y=\"0\" width=\"35\" height=\"800\"/>\n    <rect x=\"220\" y=\"0\" width=\"45\" height=\"800\"/>\n    <rect x=\"680\" y=\"0\" width=\"40\" height=\"800\"/>\n  </g>\n  <!-- Main Bamboo Branch Panda is on -->\n  <rect x=\"-20\" y=\"580\" width=\"840\" height=\"50\" rx=\"10\" fill=\"url(#bambooStalk)\"/>\n  <!-- Panda-leon Prehensile Spiral Chameleon Tail -->\n  <path d=\"M 280 520 C 180 540 120 460 140 400 C 160 340 220 360 210 400 C 200 430 170 420 170 400\" stroke=\"#15803D\" stroke-width=\"28\" fill=\"none\" stroke-linecap=\"round\"/>\n  <!-- Panda Body with Reptilian Scales -->\n  <ellipse cx=\"400\" cy=\"490\" rx=\"150\" ry=\"120\" fill=\"#FFFFFF\"/>\n  <ellipse cx=\"400\" cy=\"530\" rx=\"140\" ry=\"80\" fill=\"#0F172A\"/>\n  <!-- Arms Gripping Bamboo -->\n  <ellipse cx=\"320\" cy=\"570\" rx=\"40\" ry=\"25\" fill=\"#0F172A\"/>\n  <ellipse cx=\"480\" cy=\"570\" rx=\"40\" ry=\"25\" fill=\"#0F172A\"/>\n  <!-- Panda Round Head -->\n  <circle cx=\"400\" cy=\"330\" r=\"120\" fill=\"#FFFFFF\"/>\n  <!-- Black Panda Ears -->\n  <circle cx=\"300\" cy=\"220\" r=\"45\" fill=\"#0F172A\"/>\n  <circle cx=\"500\" cy=\"220\" r=\"45\" fill=\"#0F172A\"/>\n  <!-- Black Eye Patches -->\n  <ellipse cx=\"340\" cy=\"320\" rx=\"35\" ry=\"42\" fill=\"#0F172A\" transform=\"rotate(-15 340 320)\"/>\n  <ellipse cx=\"460\" cy=\"320\" rx=\"35\" ry=\"42\" fill=\"#0F172A\" transform=\"rotate(15 460 320)\"/>\n  <!-- REVOLVING CHAMELEON EYES -->\n  <circle cx=\"340\" cy=\"320\" r=\"22\" fill=\"#22C55E\"/>\n  <circle cx=\"340\" cy=\"320\" r=\"14\" fill=\"#15803D\"/>\n  <circle cx=\"345\" cy=\"316\" r=\"6\" fill=\"#FEF08A\"/>\n  <circle cx=\"345\" cy=\"316\" r=\"3\" fill=\"#0F172A\"/>\n  <circle cx=\"460\" cy=\"320\" r=\"22\" fill=\"#22C55E\"/>\n  <circle cx=\"460\" cy=\"320\" r=\"14\" fill=\"#15803D\"/>\n  <circle cx=\"455\" cy=\"324\" r=\"6\" fill=\"#FEF08A\"/>\n  <circle cx=\"455\" cy=\"324\" r=\"3\" fill=\"#0F172A\"/>\n  <!-- Panda Nose & Mouth -->\n  <ellipse cx=\"400\" cy=\"370\" rx=\"18\" ry=\"12\" fill=\"#0F172A\"/>\n  <path d=\"M 390 385 Q 400 395 410 385\" stroke=\"#0F172A\" stroke-width=\"4\" fill=\"none\"/>\n  <!-- LONG STICKY CHAMELEON TONGUE ZAPPING A BUG -->\n  <path d=\"M 400 385 Q 480 340 600 300 Q 640 280 660 310\" stroke=\"#F472B6\" stroke-width=\"12\" fill=\"none\" stroke-linecap=\"round\"/>\n  <!-- Glow Bug at tip -->\n  <circle cx=\"660\" cy=\"310\" r=\"12\" fill=\"#FACC15\"/>\n  <circle cx=\"660\" cy=\"310\" r=\"18\" fill=\"#FEF08A\" opacity=\"0.4\"/>\n  <!-- Badge -->\n  <g transform=\"translate(40, 50)\">\n    <rect width=\"260\" height=\"55\" rx=\"27.5\" fill=\"#0F172A\" opacity=\"0.85\" stroke=\"#22C55E\" stroke-width=\"2\"/>\n    <text x=\"25\" y=\"36\" font-family=\"'Kanit', sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#86EFAC\">🐼 + 🦎 แพนด้าเลียน</text>\n  </g>\n</svg>"
+  }
+];
